@@ -1,0 +1,297 @@
+/* Reset & Base Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* 
+   ====================================================
+   WALLPAPER LATAR BELAKANG UTAMA UNTUK SELURUH HALAMAN
+   ====================================================
+*/
+body {
+    /* 
+       GANTI KODE ATAU PATH GAMBAR DI BAWAH INI SESUAI GAMBAR ANDA 
+       Contoh jika menggunakan file lokal: background-image: url('img/banner.jpg');
+    */
+    background-image: url('img/banner.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Agar gambar background tidak ikut tergeser saat di-scroll */
+    background-repeat: no-repeat;
+    color: #e0e0e0;
+}
+
+/* Lapisan Gelap Transparan di Atas Wallpaper (Agar Tulisan & Tabel Jelas) */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(18, 18, 18, 0.85); /* Ubah angka 0.85 untuk mengatur kegelapan (0.1 sangat terang - 0.9 sangat gelap) */
+    z-index: -1;
+}
+
+/* 1. BAGIAN HEADER (Transparan menyatu dengan wallpaper) */
+.site-header {
+    background-color: rgba(26, 26, 26, 0.7); /* Transparan gelap */
+    backdrop-filter: blur(8px); /* Efek blur halus di belakang header */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 5%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#interactive-logo {
+    height: 42px;
+    width: auto;
+    max-width: 120px;
+    object-fit: contain;
+    background-color: #ffffff;
+    padding: 3px;
+    border-radius: 6px;
+    cursor: pointer;
+    border: 2px solid #4a5568;
+}
+
+.header-brand {
+    font-weight: 600;
+    color: #e2e8f0;
+    font-size: 1rem;
+}
+
+.site-nav {
+    display: flex;
+    gap: 20px;
+}
+
+.site-nav a {
+    text-decoration: none;
+    color: #a0aec0;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.site-nav a:hover {
+    color: #ffffff;
+}
+
+/* BANNER HERO (KUTIPAN SLOGAN) */
+.hero-banner {
+    position: relative;
+    width: 100%;
+    padding: 60px 8% 30px 8%;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    max-width: 550px;
+}
+
+.hero-subtitle {
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    color: #e53e3e;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.hero-title {
+    font-size: 2.2rem;
+    color: #ffffff;
+    font-family: 'Georgia', serif;
+    margin: 8px 0 12px 0;
+    line-height: 1.2;
+}
+
+.hero-desc {
+    font-size: 0.9rem;
+    color: #cbd5e0;
+}
+
+/* 2. BAGIAN CONTENT (TABEL PRODUK) */
+.site-content {
+    padding: 20px 5% 50px 5%;
+    max-width: 1100px;
+    margin: 0 auto;
+    min-height: 70vh;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.section-title h2 {
+    color: #e2e8f0;
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+}
+
+.section-title p {
+    color: #a0aec0;
+    font-size: 0.85rem;
+}
+
+.product-grid-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: rgba(26, 26, 26, 0.8); /* Tabel transparan menyatu dengan wallpaper */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    table-layout: fixed;
+    backdrop-filter: blur(4px);
+}
+
+.product-grid-table td {
+    width: 33.33%;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    text-align: center;
+    vertical-align: top;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.product-grid-table td:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.product-grid-table td img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 4px;
+    border: 1px solid #333;
+}
+
+.product-desc {
+    margin-top: 10px;
+}
+
+.product-desc h3 {
+    font-size: 0.95rem;
+    color: #e2e8f0;
+    margin-bottom: 4px;
+}
+
+.price {
+    color: #63b3ed;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+/* 
+   ====================================================
+   3. BAGIAN FOOTER (TETAP WARNA HITAM POLOS)
+   ====================================================
+*/
+.site-footer {
+    text-align: center;
+    padding: 25px;
+    background-color: #161616; /* Tetap hitam polos pekat */
+    color: #718096;
+    border-top: 1px solid #2d2d2d;
+    position: relative;
+    z-index: 10;
+    font-size: 0.85rem;
+}
+
+/* Modal Popup Styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    padding: 25px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 480px;
+    position: relative;
+    border: 1px solid #333;
+}
+
+.close-btn {
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    font-size: 22px;
+    cursor: pointer;
+    color: #a0aec0;
+}
+
+.close-btn:hover {
+    color: #fff;
+}
+
+.brand-detail {
+    text-align: center;
+    line-height: 1.5;
+}
+
+.product-detail-layout {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.product-detail-layout img {
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 1px solid #444;
+}
+
+.btn-aksi {
+    background-color: #2b4c7e;
+    color: #ffffff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 0.85rem;
+    margin-top: 10px;
+    transition: background 0.2s;
+}
+
+.btn-aksi:hover {
+    background-color: #3b65a5;
+}
+
+/* Responsive Mobile */
+@media (max-width: 768px) {
+    .product-grid-table td {
+        display: block;
+        width: 100%;
+    }
+    .hero-title {
+        font-size: 1.6rem;
+    }
+}

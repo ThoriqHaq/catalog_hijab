@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katalog Hijab Official</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- ================= BAGIAN 1: HEADER (LOGO & NAVIGASI) ================= -->
+    <header class="site-header">
+        <div class="logo-wrapper">
+            <!-- Logo utama yang interaktif (bisa diklik) -->
+            <img src="img/logo1.jpg" alt="Logo Utama" id="interactive-logo" title="Klik logo ini untuk detail brand">
+            <span class="header-brand">Hijab Official</span>
+        </div>
+        <nav class="site-nav">
+            <a href="#">Beranda</a>
+            <a href="#katalog">Katalog</a>
+            <a href="#kontak">Kontak</a>
+        </nav>
+    </header>
+
+    <!-- ================= BANNER HERO (KUTIPAN/SLOGAN HIJAB) ================= -->
+    <section class="hero-banner">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="hero-subtitle">THE HIJAB COLLECTION EDIT</span>
+            <h1 class="hero-title">Elegance in Simplicity.<br>Find Your Style.</h1>
+            <p class="hero-desc">Temukan keanggunan dan kenyamanan koleksi hijab terbaik untuk menyempurnakan penampilan harianmu.</p>
+        </div>
+    </section>
+
+    <!-- ================= BAGIAN 2: CONTENT (TABEL 9 PRODUK HIJAB) ================= -->
+    <main class="site-content" id="katalog">
+        <div class="section-title">
+            <h2>Koleksi Produk Hijab</h2>
+            <p>Pilih dari 9 koleksi favorit dengan bahan premium berkualitas tinggi.</p>
+        </div>
+
+        <div class="table-container">
+            <table class="product-grid-table">
+                <tbody>
+                    <!-- Baris 1 -->
+                    <tr>
+                        <td onclick="bukaModal('Aisha Voal Premium', 'img/hijab1.jpg', 'Bahan Voal Ultrafine berkualitas tinggi, lembut dan mudah dibentuk.', 'Rp 59.000')">
+                            <img src="img/hijab1.jpg" alt="Hijab 1">
+                            <div class="product-desc">
+                                <h3>Aisha Voal Premium</h3>
+                                <span class="price">Rp 59.000</span>
+                            </div>
+                        </td>
+                        <td onclick="bukaModal('Silk Cradenza Pashmina', 'img/hijab2.jpg', 'Bahan Silk Cradenza mewah, memberikan kesan mengkilap yang elegan.', 'Rp 89.000')">
+                            <img src="img/hijab2.jpg" alt="Hijab 2">
+                            <div class="product-desc">
+                                <h3>Silk Cradenza Pashmina</h3>
+                                <span class="price">Rp 89.000</span>
+                            </div>
+                        </td>
+                        <td onclick="bukaModal('Daily Bergo Oval', 'img/hijab3.jpg', 'Hijab instan berbahan Jersey Premium, adem dan praktis.', 'Rp 45.000')">
+                            <img src="img/hijab3.jpg" alt="Hijab 3">
+                            <div class="product-desc">
+                                <h3>Daily Bergo Oval</h3>
+                                <span class="price">Rp 45.000</span>
+                            </div>
+                        </td>
+                    </tr>
+                    <!-- Baris 2 -->
+                    <tr>
+                        <td onclick="bukaModal('Bella Square Polos', 'img/hijab4.jpg', 'Bahan Double Hycon yang nyaman, ringan, dan tidak nerawang.', 'Rp 35.000')">
+                            <img src="img/hijab4.jpg" alt="Hijab 4">
+                            <div class="product-desc">
+                                <h3>Bella Square Polos</h3>
+                                <span class="price">Rp 35.000</span>
+                            </div>
+                        </td>
+                        <td onclick="bukaModal('Pashmina Inner 2 in 1', 'img/hijab5.jpg', 'Pashmina menyatu dengan inner, praktis tanpa ragu melorot.', 'Rp 65.000')">
+                            <img src="img/hijab5.jpg" alt="Hijab 5">
+                            <div class="product-desc">
+                                <h3>Pashmina Inner 2 in 1</h3>
+                                <span class="price">Rp 65.000</span>
+                            </div>
+                        </td>
+                        <td onclick="bukaModal('Segi Empat Motif Eid', 'img/hijab6.jpg', 'Motif eksklusif edisi spesial dengan finishing lasercut.', 'Rp 95.000')">
+                            <img src="img/hijab6.jpg" alt="Hijab 6">
+                            <div class="product-desc">
+                                <h3>Segi Empat Motif Eid</h3>
+                                <span class="price">Rp 95.000</span>
+                            </div>
+                        </td>
+                    </tr>
+                    <!-- Baris 3 -->
+                    <tr>
+                        <td onclick="bukaModal('Pashmina Kaos Rayon', 'img/hijab7.jpg', 'Bahan Kaos Rayon super adem, stretch, dan jatuh dengan cantik.', 'Rp 55.000')">
+                            <img src="img/hijab7.jpg" alt="Hijab 7">
+                            <div class="product-desc">
+                                <h3>Pashmina Kaos Rayon</h3>
+                                <span class="price">Rp 55.000</span>
+                            </div>
+                        </td>
+                        <td onclick="bukaModal('Khimar Syar\'i Layer', 'img/hijab8.jpg', 'Khimar syari 2 layer bahan ceruty babydoll yang anggun.', 'Rp 120.000')">
+                            <img src="img/hijab8.jpg" alt="Hijab 8">
+                            <div class="product-desc">
+                                <h3>Khimar Syar'i Layer</h3>
+                                <span class="price">Rp 120.000</span>
+                            </div>
+                        </td>
+                        <td onclick="bukaModal('French Khimar Instant', 'img/hijab9.jpg', 'Desain ala French Khimar simpel namun tetap modis.', 'Rp 135.000')">
+                            <img src="img/hijab9.jpg" alt="Hijab 9">
+                            <div class="product-desc">
+                                <h3>French Khimar Instant</h3>
+                                <span class="price">Rp 135.000</span>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <!-- ================= BAGIAN 3: FOOTER ================= -->
+    <footer class="site-footer">
+        <p>&copy; 2026 Katalog Hijab Official. Hak Cipta Dilindungi.</p>
+    </footer>
+
+    <!-- ================= MODAL POPUP (INTERAKTIF JS) ================= -->
+    <div id="logo-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="close-logo-modal">&times;</span>
+            <div class="brand-detail">
+                <img src="img/logo1.jpg" alt="Logo Utama" style="max-width: 120px; margin-bottom: 15px; border-radius: 6px;">
+                <h2>Informasi Brand Utama</h2>
+                <p>Pusat penyedia produk hijab premium berkualitas tinggi.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="product-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="close-product-modal">&times;</span>
+            <div class="product-detail-layout">
+                <img id="modal-img" src="" alt="Produk">
+                <div>
+                    <h2 id="modal-title">Nama Produk</h2>
+                    <h3 id="modal-price" class="price">Rp 0</h3>
+                    <p id="modal-desc">Deskripsi...</p>
+                    <button class="btn-aksi"><i class="fa-solid fa-cart-shopping"></i> Pesan Sekarang</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
